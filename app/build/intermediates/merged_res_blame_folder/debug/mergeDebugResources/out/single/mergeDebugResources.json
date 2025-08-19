@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.smartgrocery.pantry.app-debug-54:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.smartgrocery.pantry.app-main-56:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.smartgrocery.pantry.app-debug-54:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.smartgrocery.pantry.app-main-56:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    }
+]
