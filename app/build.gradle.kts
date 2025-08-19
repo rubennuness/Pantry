@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -10,7 +12,7 @@ plugins {
 val serpApiKey: String = run {
     val file = rootProject.file("local.properties")
     if (file.exists()) {
-        val props = java.util.Properties()
+        val props = Properties()
         file.inputStream().use { props.load(it) }
         props.getProperty("SERPAPI_KEY") ?: providers.gradleProperty("SERPAPI_KEY").orNull ?: ""
     } else providers.gradleProperty("SERPAPI_KEY").orNull ?: ""
