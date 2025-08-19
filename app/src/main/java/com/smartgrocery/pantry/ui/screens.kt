@@ -118,7 +118,7 @@ fun ShoppingList(app: AppState) {
         Spacer(Modifier.height(12.dp))
         Text("Dynamic by waste risk: replenish items not planned/used soon.")
         Spacer(Modifier.height(8.dp))
-        ProductSearchBox()
+        ProductSearchBox(app)
         LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp)) {
             val candidates = app.items.filter { it.expirationDate == null || it.wasteRisk() == com.smartgrocery.pantry.data.WasteRisk.LOW }
             items(candidates) { item ->
@@ -135,7 +135,7 @@ fun ReceiptScanStub(app: AppState) {
         Spacer(Modifier.height(12.dp))
         Text("Scan a barcode (EAN) or add sample items.")
         Spacer(Modifier.height(8.dp))
-        BarcodeScanRow()
+        BarcodeScanRow(app)
         Spacer(Modifier.height(8.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             Button(onClick = { appAddSample(app) }) { Text("Add sample items") }
@@ -151,6 +151,7 @@ private fun appAddSample(app: AppState) {
 
 @Composable
 private fun BarcodeScanRow(
+    app: AppState,
     provider: ProductSearchProvider = when {
         BuildConfig.EAN_SEARCH_TOKEN.isNotBlank() -> EanSearchProvider()
         BuildConfig.SERPAPI_KEY.isNotBlank() -> SerpApiProvider(BuildConfig.SERPAPI_KEY)
@@ -244,6 +245,7 @@ private suspend fun <T> com.google.android.gms.tasks.Task<T>.await(): T =
 
 @Composable
 private fun ProductSearchBox(
+    app: AppState,
     provider: ProductSearchProvider = when {
         BuildConfig.EAN_SEARCH_TOKEN.isNotBlank() -> EanSearchProvider()
         BuildConfig.SERPAPI_KEY.isNotBlank() -> SerpApiProvider(BuildConfig.SERPAPI_KEY)
