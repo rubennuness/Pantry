@@ -26,7 +26,6 @@ import androidx.navigation.compose.rememberNavController
 fun AppRoot() {
     val navController = rememberNavController()
     val appState = rememberAppState()
-    appState.refresh()
 
     val destinations = listOf(
         BottomDestination.Inventory,

@@ -81,7 +81,7 @@ class RoomRepository private constructor(context: Context) : Repository {
         title = title,
         description = description,
         plannedDate = plannedDate,
-        usedItemIds = try { Json.decodeFromString(usedItemIdsJson) } catch (_: Throwable) { emptyList() }
+        usedItemIds = try { Json.decodeFromString<List<String>>(usedItemIdsJson) } catch (_: Throwable) { emptyList() }
     )
 
     private fun PantryItem.toEntity(): PantryItemEntity = PantryItemEntity(

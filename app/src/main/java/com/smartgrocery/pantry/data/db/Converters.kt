@@ -4,6 +4,7 @@ import androidx.room.TypeConverter
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.builtins.ListSerializer
+import kotlinx.serialization.builtins.serializer
 
 object Converters {
     private val json = Json

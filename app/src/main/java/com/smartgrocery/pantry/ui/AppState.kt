@@ -21,9 +21,7 @@ class AppState(
     private val repository: Repository
 ) {
     var items by mutableStateOf(listOf<PantryItem>())
-        private set
     var meals by mutableStateOf(listOf<Meal>())
-        private set
 
     fun startCollecting() {
         // No-op here; see LaunchedEffect in rememberAppState

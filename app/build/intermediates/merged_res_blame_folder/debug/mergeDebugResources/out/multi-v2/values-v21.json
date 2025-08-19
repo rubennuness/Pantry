@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.smartgrocery.pantry.app-mergeDebugResources-52:/values-v21/values-v21.xml",
+            "outputFile": "com.smartgrocery.pantry.app-mergeDebugResources-64:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/9cb916a66289cbca68d10b7cdb4ebd57/transformed/core-1.13.1/res/values-v21/values-v21.xml",
+                    "source": "/Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/185dd04a6e3ac5902686d906302f136c/transformed/core-1.13.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
