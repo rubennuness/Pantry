@@ -8,416 +8,416 @@
 8        android:minSdkVersion="24"
 9        android:targetSdkVersion="34" />
 10
-11    <uses-permission android:name="android.permission.WAKE_LOCK" />
-11-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:23:5-68
-11-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:23:22-65
-12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:24:5-79
-12-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:24:22-76
-13    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-13-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:25:5-81
-13-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:25:22-78
-14    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-14-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:26:5-77
-14-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:26:22-74
-15
-16    <permission
-16-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/185dd04a6e3ac5902686d906302f136c/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
-17        android:name="com.smartgrocery.pantry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-17-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/185dd04a6e3ac5902686d906302f136c/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
-18        android:protectionLevel="signature" />
-18-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/185dd04a6e3ac5902686d906302f136c/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
-19
-20    <uses-permission android:name="com.smartgrocery.pantry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-20-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/185dd04a6e3ac5902686d906302f136c/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
-20-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/185dd04a6e3ac5902686d906302f136c/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
-21    <uses-permission android:name="android.permission.INTERNET" />
-21-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0366669fbfb45faeebdf936cd55c2b10/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
-21-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0366669fbfb45faeebdf936cd55c2b10/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:26:22-64
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:3:5-67
+11-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:3:22-64
+12    <uses-permission android:name="android.permission.WAKE_LOCK" />
+12-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:23:5-68
+12-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:23:22-65
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:24:5-79
+13-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:24:22-76
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:25:5-81
+14-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:25:22-78
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:26:5-77
+15-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:26:22-74
+16
+17    <permission
+17-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1d18ec71c419ac51d4e8e1be8b52d85e/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+18        android:name="com.smartgrocery.pantry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+18-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1d18ec71c419ac51d4e8e1be8b52d85e/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+19        android:protectionLevel="signature" />
+19-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1d18ec71c419ac51d4e8e1be8b52d85e/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+20
+21    <uses-permission android:name="com.smartgrocery.pantry.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+21-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1d18ec71c419ac51d4e8e1be8b52d85e/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+21-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1d18ec71c419ac51d4e8e1be8b52d85e/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
 22
 23    <application
-23-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:3:5-15:19
+23-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:4:5-16:19
 24        android:allowBackup="true"
-24-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:5:9-35
+24-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:6:9-35
 25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-25-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/185dd04a6e3ac5902686d906302f136c/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+25-->[androidx.core:core:1.13.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1d18ec71c419ac51d4e8e1be8b52d85e/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 26        android:debuggable="true"
 27        android:extractNativeLibs="false"
 28        android:label="Smart Grocery + Pantry"
-28-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:4:9-47
+28-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:5:9-47
 29        android:supportsRtl="true"
-29-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:6:9-35
+29-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:7:9-35
 30        android:testOnly="true" >
 31        <activity
-31-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:7:9-14:20
+31-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:8:9-15:20
 32            android:name="com.smartgrocery.pantry.MainActivity"
-32-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:8:13-41
+32-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:9:13-41
 33            android:exported="true" >
-33-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:9:13-36
+33-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:10:13-36
 34            <intent-filter>
-34-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:10:13-13:29
+34-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:11:13-14:29
 35                <action android:name="android.intent.action.MAIN" />
-35-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:11:17-69
-35-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:11:25-66
+35-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:12:17-69
+35-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:12:25-66
 36
 37                <category android:name="android.intent.category.LAUNCHER" />
-37-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:12:17-77
-37-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:12:27-74
+37-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:13:17-77
+37-->/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/AndroidManifest.xml:13:27-74
 38            </intent-filter>
 39        </activity>
 40
 41        <provider
-41-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:29:9-37:20
+41-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:29:9-37:20
 42            android:name="androidx.startup.InitializationProvider"
-42-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:30:13-67
+42-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:30:13-67
 43            android:authorities="com.smartgrocery.pantry.androidx-startup"
-43-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:31:13-68
+43-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:31:13-68
 44            android:exported="false" >
-44-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:32:13-37
+44-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:32:13-37
 45            <meta-data
-45-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:34:13-36:52
+45-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:34:13-36:52
 46                android:name="androidx.work.WorkManagerInitializer"
-46-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:35:17-68
+46-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:35:17-68
 47                android:value="androidx.startup" />
-47-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:36:17-49
+47-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:36:17-49
 48            <meta-data
-48-->[androidx.emoji2:emoji2:1.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1b7920e13c013a56f1819abcaa7288a5/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+48-->[androidx.emoji2:emoji2:1.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c884991dfa4aaed6c4262ca25a84b49b/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
 49                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-49-->[androidx.emoji2:emoji2:1.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1b7920e13c013a56f1819abcaa7288a5/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+49-->[androidx.emoji2:emoji2:1.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c884991dfa4aaed6c4262ca25a84b49b/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
 50                android:value="androidx.startup" />
-50-->[androidx.emoji2:emoji2:1.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1b7920e13c013a56f1819abcaa7288a5/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+50-->[androidx.emoji2:emoji2:1.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c884991dfa4aaed6c4262ca25a84b49b/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
 51            <meta-data
-51-->[androidx.lifecycle:lifecycle-process:2.8.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/53e57fa8667ac598ec01ab2b4ee6a7bb/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:29:13-31:52
+51-->[androidx.lifecycle:lifecycle-process:2.8.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c6fb93b4f0d4403f77561febccab3078/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:29:13-31:52
 52                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-52-->[androidx.lifecycle:lifecycle-process:2.8.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/53e57fa8667ac598ec01ab2b4ee6a7bb/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:30:17-78
+52-->[androidx.lifecycle:lifecycle-process:2.8.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c6fb93b4f0d4403f77561febccab3078/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:30:17-78
 53                android:value="androidx.startup" />
-53-->[androidx.lifecycle:lifecycle-process:2.8.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/53e57fa8667ac598ec01ab2b4ee6a7bb/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:31:17-49
+53-->[androidx.lifecycle:lifecycle-process:2.8.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c6fb93b4f0d4403f77561febccab3078/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:31:17-49
 54            <meta-data
-54-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+54-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
 55                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-55-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+55-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
 56                android:value="androidx.startup" />
-56-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+56-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
 57        </provider>
 58
 59        <service
-59-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:39:9-45:35
+59-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:39:9-45:35
 60            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
-60-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:40:13-88
+60-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:40:13-88
 61            android:directBootAware="false"
-61-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:41:13-44
+61-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:41:13-44
 62            android:enabled="@bool/enable_system_alarm_service_default"
-62-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:42:13-72
+62-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:42:13-72
 63            android:exported="false" />
-63-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:43:13-37
+63-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:43:13-37
 64        <service
-64-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:46:9-52:35
+64-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:46:9-52:35
 65            android:name="androidx.work.impl.background.systemjob.SystemJobService"
-65-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:47:13-84
+65-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:47:13-84
 66            android:directBootAware="false"
-66-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:48:13-44
+66-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:48:13-44
 67            android:enabled="@bool/enable_system_job_service_default"
-67-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:49:13-70
+67-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:49:13-70
 68            android:exported="true"
-68-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:50:13-36
+68-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:50:13-36
 69            android:permission="android.permission.BIND_JOB_SERVICE" />
-69-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:51:13-69
+69-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:51:13-69
 70        <service
-70-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:53:9-59:35
+70-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:53:9-59:35
 71            android:name="androidx.work.impl.foreground.SystemForegroundService"
-71-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:54:13-81
+71-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:54:13-81
 72            android:directBootAware="false"
-72-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:55:13-44
+72-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:55:13-44
 73            android:enabled="@bool/enable_system_foreground_service_default"
-73-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:56:13-77
+73-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:56:13-77
 74            android:exported="false" />
-74-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:57:13-37
+74-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:57:13-37
 75
 76        <receiver
-76-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:61:9-66:35
+76-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:61:9-66:35
 77            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
-77-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:62:13-88
+77-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:62:13-88
 78            android:directBootAware="false"
-78-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:63:13-44
+78-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:63:13-44
 79            android:enabled="true"
-79-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:64:13-35
+79-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:64:13-35
 80            android:exported="false" />
-80-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:65:13-37
+80-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:65:13-37
 81        <receiver
-81-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:67:9-77:20
+81-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:67:9-77:20
 82            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
-82-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:68:13-106
+82-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:68:13-106
 83            android:directBootAware="false"
-83-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:69:13-44
+83-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:69:13-44
 84            android:enabled="false"
-84-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:70:13-36
+84-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:70:13-36
 85            android:exported="false" >
-85-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:71:13-37
+85-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:71:13-37
 86            <intent-filter>
-86-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:73:13-76:29
+86-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:73:13-76:29
 87                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-87-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:74:17-87
-87-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:74:25-84
+87-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:74:17-87
+87-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:74:25-84
 88                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-88-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:75:17-90
-88-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:75:25-87
+88-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:75:17-90
+88-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:75:25-87
 89            </intent-filter>
 90        </receiver>
 91        <receiver
-91-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:78:9-88:20
+91-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:78:9-88:20
 92            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
-92-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:79:13-104
+92-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:79:13-104
 93            android:directBootAware="false"
-93-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:80:13-44
+93-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:80:13-44
 94            android:enabled="false"
-94-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:81:13-36
+94-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:81:13-36
 95            android:exported="false" >
-95-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:82:13-37
+95-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:82:13-37
 96            <intent-filter>
-96-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:84:13-87:29
+96-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:84:13-87:29
 97                <action android:name="android.intent.action.BATTERY_OKAY" />
-97-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:85:17-77
-97-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:85:25-74
+97-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:85:17-77
+97-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:85:25-74
 98                <action android:name="android.intent.action.BATTERY_LOW" />
-98-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:86:17-76
-98-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:86:25-73
+98-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:86:17-76
+98-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:86:25-73
 99            </intent-filter>
 100        </receiver>
 101        <receiver
-101-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:89:9-99:20
+101-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:89:9-99:20
 102            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
-102-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:90:13-104
+102-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:90:13-104
 103            android:directBootAware="false"
-103-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:91:13-44
+103-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:91:13-44
 104            android:enabled="false"
-104-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:92:13-36
+104-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:92:13-36
 105            android:exported="false" >
-105-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:93:13-37
+105-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:93:13-37
 106            <intent-filter>
-106-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:95:13-98:29
+106-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:95:13-98:29
 107                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
-107-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:96:17-83
-107-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:96:25-80
+107-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:96:17-83
+107-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:96:25-80
 108                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
-108-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:97:17-82
-108-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:97:25-79
+108-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:97:17-82
+108-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:97:25-79
 109            </intent-filter>
 110        </receiver>
 111        <receiver
-111-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:100:9-109:20
+111-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:100:9-109:20
 112            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
-112-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:101:13-103
+112-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:101:13-103
 113            android:directBootAware="false"
-113-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:102:13-44
+113-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:102:13-44
 114            android:enabled="false"
-114-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:103:13-36
+114-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:103:13-36
 115            android:exported="false" >
-115-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:104:13-37
+115-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:104:13-37
 116            <intent-filter>
-116-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:106:13-108:29
+116-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:106:13-108:29
 117                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-117-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:107:17-79
-117-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:107:25-76
+117-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:107:17-79
+117-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:107:25-76
 118            </intent-filter>
 119        </receiver>
 120        <receiver
-120-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:110:9-121:20
+120-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:110:9-121:20
 121            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-121-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:111:13-88
+121-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:111:13-88
 122            android:directBootAware="false"
-122-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:112:13-44
+122-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:112:13-44
 123            android:enabled="false"
-123-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:113:13-36
+123-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:113:13-36
 124            android:exported="false" >
-124-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:114:13-37
+124-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:114:13-37
 125            <intent-filter>
-125-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:116:13-120:29
+125-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:116:13-120:29
 126                <action android:name="android.intent.action.BOOT_COMPLETED" />
-126-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:117:17-79
-126-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:117:25-76
+126-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:117:17-79
+126-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:117:25-76
 127                <action android:name="android.intent.action.TIME_SET" />
-127-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:118:17-73
-127-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:118:25-70
+127-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:118:17-73
+127-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:118:25-70
 128                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-128-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:119:17-81
-128-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:119:25-78
+128-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:119:17-81
+128-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:119:25-78
 129            </intent-filter>
 130        </receiver>
 131        <receiver
-131-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:122:9-131:20
+131-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:122:9-131:20
 132            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
-132-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:123:13-99
+132-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:123:13-99
 133            android:directBootAware="false"
-133-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:124:13-44
+133-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:124:13-44
 134            android:enabled="@bool/enable_system_alarm_service_default"
-134-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:125:13-72
+134-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:125:13-72
 135            android:exported="false" >
-135-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:126:13-37
+135-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:126:13-37
 136            <intent-filter>
-136-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:128:13-130:29
+136-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:128:13-130:29
 137                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
-137-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:129:17-98
-137-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:129:25-95
+137-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:129:17-98
+137-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:129:25-95
 138            </intent-filter>
 139        </receiver>
 140        <receiver
-140-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:132:9-142:20
+140-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:132:9-142:20
 141            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
-141-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:133:13-78
+141-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:133:13-78
 142            android:directBootAware="false"
-142-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:134:13-44
+142-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:134:13-44
 143            android:enabled="true"
-143-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:135:13-35
+143-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:135:13-35
 144            android:exported="true"
-144-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:136:13-36
+144-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:136:13-36
 145            android:permission="android.permission.DUMP" >
-145-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:137:13-57
+145-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:137:13-57
 146            <intent-filter>
-146-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:139:13-141:29
+146-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:139:13-141:29
 147                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
-147-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:140:17-88
-147-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/fe425132c34b4b757a2066db7339c0a3/transformed/work-runtime-2.9.1/AndroidManifest.xml:140:25-85
+147-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:140:17-88
+147-->[androidx.work:work-runtime:2.9.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c3c944589e8bed7ef7f54d5aa7da7b3c/transformed/work-runtime-2.9.1/AndroidManifest.xml:140:25-85
 148            </intent-filter>
 149        </receiver>
 150
 151        <service
-151-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/a3848e9b13604acba189be86b1266a5f/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:9:9-15:19
+151-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/e79180e96b7cb599cdce03d214e85024/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:9:9-15:19
 152            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-152-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/a3848e9b13604acba189be86b1266a5f/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:10:13-91
+152-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/e79180e96b7cb599cdce03d214e85024/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:10:13-91
 153            android:directBootAware="true"
-153-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/8ba0c98830f0cc93ecbd836883b4cb1f/transformed/common-18.8.0/AndroidManifest.xml:17:13-43
+153-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0828a4cedc6afc08941c364aec04eb82/transformed/common-18.8.0/AndroidManifest.xml:17:13-43
 154            android:exported="false" >
-154-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/a3848e9b13604acba189be86b1266a5f/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:11:13-37
+154-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/e79180e96b7cb599cdce03d214e85024/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:11:13-37
 155            <meta-data
-155-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/a3848e9b13604acba189be86b1266a5f/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:12:13-14:85
+155-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/e79180e96b7cb599cdce03d214e85024/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:12:13-14:85
 156                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
-156-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/a3848e9b13604acba189be86b1266a5f/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:13:17-114
+156-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/e79180e96b7cb599cdce03d214e85024/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:13:17-114
 157                android:value="com.google.firebase.components.ComponentRegistrar" />
-157-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/a3848e9b13604acba189be86b1266a5f/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:14:17-82
+157-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/e79180e96b7cb599cdce03d214e85024/transformed/play-services-mlkit-text-recognition-common-19.0.0/AndroidManifest.xml:14:17-82
 158            <meta-data
-158-->[com.google.mlkit:vision-common:17.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/85d0b8c08786993ff9dfeae0f278cb3b/transformed/vision-common-17.3.0/AndroidManifest.xml:12:13-14:85
+158-->[com.google.mlkit:vision-common:17.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/a320bab2284124b9943de48705e5c5c4/transformed/vision-common-17.3.0/AndroidManifest.xml:12:13-14:85
 159                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-159-->[com.google.mlkit:vision-common:17.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/85d0b8c08786993ff9dfeae0f278cb3b/transformed/vision-common-17.3.0/AndroidManifest.xml:13:17-124
+159-->[com.google.mlkit:vision-common:17.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/a320bab2284124b9943de48705e5c5c4/transformed/vision-common-17.3.0/AndroidManifest.xml:13:17-124
 160                android:value="com.google.firebase.components.ComponentRegistrar" />
-160-->[com.google.mlkit:vision-common:17.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/85d0b8c08786993ff9dfeae0f278cb3b/transformed/vision-common-17.3.0/AndroidManifest.xml:14:17-82
+160-->[com.google.mlkit:vision-common:17.3.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/a320bab2284124b9943de48705e5c5c4/transformed/vision-common-17.3.0/AndroidManifest.xml:14:17-82
 161            <meta-data
-161-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/8ba0c98830f0cc93ecbd836883b4cb1f/transformed/common-18.8.0/AndroidManifest.xml:20:13-22:85
+161-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0828a4cedc6afc08941c364aec04eb82/transformed/common-18.8.0/AndroidManifest.xml:20:13-22:85
 162                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-162-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/8ba0c98830f0cc93ecbd836883b4cb1f/transformed/common-18.8.0/AndroidManifest.xml:21:17-120
+162-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0828a4cedc6afc08941c364aec04eb82/transformed/common-18.8.0/AndroidManifest.xml:21:17-120
 163                android:value="com.google.firebase.components.ComponentRegistrar" />
-163-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/8ba0c98830f0cc93ecbd836883b4cb1f/transformed/common-18.8.0/AndroidManifest.xml:22:17-82
+163-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0828a4cedc6afc08941c364aec04eb82/transformed/common-18.8.0/AndroidManifest.xml:22:17-82
 164        </service>
 165
 166        <provider
-166-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/8ba0c98830f0cc93ecbd836883b4cb1f/transformed/common-18.8.0/AndroidManifest.xml:9:9-13:38
+166-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0828a4cedc6afc08941c364aec04eb82/transformed/common-18.8.0/AndroidManifest.xml:9:9-13:38
 167            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-167-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/8ba0c98830f0cc93ecbd836883b4cb1f/transformed/common-18.8.0/AndroidManifest.xml:10:13-78
+167-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0828a4cedc6afc08941c364aec04eb82/transformed/common-18.8.0/AndroidManifest.xml:10:13-78
 168            android:authorities="com.smartgrocery.pantry.mlkitinitprovider"
-168-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/8ba0c98830f0cc93ecbd836883b4cb1f/transformed/common-18.8.0/AndroidManifest.xml:11:13-69
+168-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0828a4cedc6afc08941c364aec04eb82/transformed/common-18.8.0/AndroidManifest.xml:11:13-69
 169            android:exported="false"
-169-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/8ba0c98830f0cc93ecbd836883b4cb1f/transformed/common-18.8.0/AndroidManifest.xml:12:13-37
+169-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0828a4cedc6afc08941c364aec04eb82/transformed/common-18.8.0/AndroidManifest.xml:12:13-37
 170            android:initOrder="99" />
-170-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/8ba0c98830f0cc93ecbd836883b4cb1f/transformed/common-18.8.0/AndroidManifest.xml:13:13-35
+170-->[com.google.mlkit:common:18.8.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0828a4cedc6afc08941c364aec04eb82/transformed/common-18.8.0/AndroidManifest.xml:13:13-35
 171
 172        <activity
-172-->[com.google.android.gms:play-services-base:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/70d2506b43696bd440bff267287c4a0c/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+172-->[com.google.android.gms:play-services-base:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/21d89e4372a2031415ee1abc5b3324de/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
 173            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-173-->[com.google.android.gms:play-services-base:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/70d2506b43696bd440bff267287c4a0c/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+173-->[com.google.android.gms:play-services-base:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/21d89e4372a2031415ee1abc5b3324de/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
 174            android:exported="false"
-174-->[com.google.android.gms:play-services-base:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/70d2506b43696bd440bff267287c4a0c/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+174-->[com.google.android.gms:play-services-base:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/21d89e4372a2031415ee1abc5b3324de/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
 175            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-175-->[com.google.android.gms:play-services-base:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/70d2506b43696bd440bff267287c4a0c/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+175-->[com.google.android.gms:play-services-base:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/21d89e4372a2031415ee1abc5b3324de/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
 176
 177        <meta-data
-177-->[com.google.android.gms:play-services-basement:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1d10c5a64e5f53e655a96e049806fedd/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+177-->[com.google.android.gms:play-services-basement:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/14eb1c97f23f902706f6ced3d2e3b429/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
 178            android:name="com.google.android.gms.version"
-178-->[com.google.android.gms:play-services-basement:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1d10c5a64e5f53e655a96e049806fedd/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+178-->[com.google.android.gms:play-services-basement:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/14eb1c97f23f902706f6ced3d2e3b429/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
 179            android:value="@integer/google_play_services_version" />
-179-->[com.google.android.gms:play-services-basement:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/1d10c5a64e5f53e655a96e049806fedd/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+179-->[com.google.android.gms:play-services-basement:18.1.0] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/14eb1c97f23f902706f6ced3d2e3b429/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
 180
 181        <activity
-181-->[androidx.compose.ui:ui-tooling-android:1.7.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/54b09f4410f4a3db363baf1e4dee9093/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+181-->[androidx.compose.ui:ui-tooling-android:1.7.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/25bb80aea87df0c01479a065c8ace7a8/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
 182            android:name="androidx.compose.ui.tooling.PreviewActivity"
-182-->[androidx.compose.ui:ui-tooling-android:1.7.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/54b09f4410f4a3db363baf1e4dee9093/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+182-->[androidx.compose.ui:ui-tooling-android:1.7.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/25bb80aea87df0c01479a065c8ace7a8/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
 183            android:exported="true" />
-183-->[androidx.compose.ui:ui-tooling-android:1.7.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/54b09f4410f4a3db363baf1e4dee9093/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+183-->[androidx.compose.ui:ui-tooling-android:1.7.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/25bb80aea87df0c01479a065c8ace7a8/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
 184
 185        <service
-185-->[androidx.room:room-runtime:2.6.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/222fdfdbdab6b66357a56be4b649c800/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+185-->[androidx.room:room-runtime:2.6.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c9b40c415d5497ac2159589631312810/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
 186            android:name="androidx.room.MultiInstanceInvalidationService"
-186-->[androidx.room:room-runtime:2.6.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/222fdfdbdab6b66357a56be4b649c800/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+186-->[androidx.room:room-runtime:2.6.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c9b40c415d5497ac2159589631312810/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
 187            android:directBootAware="true"
-187-->[androidx.room:room-runtime:2.6.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/222fdfdbdab6b66357a56be4b649c800/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+187-->[androidx.room:room-runtime:2.6.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c9b40c415d5497ac2159589631312810/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
 188            android:exported="false" />
-188-->[androidx.room:room-runtime:2.6.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/222fdfdbdab6b66357a56be4b649c800/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+188-->[androidx.room:room-runtime:2.6.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/c9b40c415d5497ac2159589631312810/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
 189
 190        <receiver
-190-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+190-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
 191            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-191-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+191-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
 192            android:directBootAware="false"
-192-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+192-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
 193            android:enabled="true"
-193-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+193-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
 194            android:exported="true"
-194-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+194-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
 195            android:permission="android.permission.DUMP" >
-195-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+195-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
 196            <intent-filter>
-196-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+196-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
 197                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-197-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-197-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+197-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+197-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
 198            </intent-filter>
 199            <intent-filter>
-199-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+199-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
 200                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
 201            </intent-filter>
 202            <intent-filter>
-202-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+202-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
 203                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-203-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-203-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
 204            </intent-filter>
 205            <intent-filter>
-205-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+205-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
 206                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-206-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-206-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/43297745533b686bacd435d4e6b93856/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+206-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+206-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/945d94d04b9c358407b7f9e6fbe8e814/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
 207            </intent-filter>
 208        </receiver>
 209
 210        <service
-210-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0366669fbfb45faeebdf936cd55c2b10/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+210-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/6d689fd6d508a5b2c98a353895da7e91/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
 211            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-211-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0366669fbfb45faeebdf936cd55c2b10/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+211-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/6d689fd6d508a5b2c98a353895da7e91/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
 212            android:exported="false" >
-212-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0366669fbfb45faeebdf936cd55c2b10/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+212-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/6d689fd6d508a5b2c98a353895da7e91/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
 213            <meta-data
-213-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0366669fbfb45faeebdf936cd55c2b10/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+213-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/6d689fd6d508a5b2c98a353895da7e91/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
 214                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-214-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0366669fbfb45faeebdf936cd55c2b10/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+214-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/6d689fd6d508a5b2c98a353895da7e91/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
 215                android:value="cct" />
-215-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/0366669fbfb45faeebdf936cd55c2b10/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+215-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/6d689fd6d508a5b2c98a353895da7e91/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
 216        </service>
 217        <service
-217-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/bcaeafbed63df81822ffbb2dce1886e1/transformed/transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+217-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/ee22f7dbd9103b82a4aefc9c0a641afc/transformed/transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
 218            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-218-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/bcaeafbed63df81822ffbb2dce1886e1/transformed/transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+218-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/ee22f7dbd9103b82a4aefc9c0a641afc/transformed/transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
 219            android:exported="false"
-219-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/bcaeafbed63df81822ffbb2dce1886e1/transformed/transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+219-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/ee22f7dbd9103b82a4aefc9c0a641afc/transformed/transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
 220            android:permission="android.permission.BIND_JOB_SERVICE" >
-220-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/bcaeafbed63df81822ffbb2dce1886e1/transformed/transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+220-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/ee22f7dbd9103b82a4aefc9c0a641afc/transformed/transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
 221        </service>
 222
 223        <receiver
-223-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/bcaeafbed63df81822ffbb2dce1886e1/transformed/transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+223-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/ee22f7dbd9103b82a4aefc9c0a641afc/transformed/transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
 224            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-224-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/bcaeafbed63df81822ffbb2dce1886e1/transformed/transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
+224-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/ee22f7dbd9103b82a4aefc9c0a641afc/transformed/transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
 225            android:exported="false" />
-225-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/bcaeafbed63df81822ffbb2dce1886e1/transformed/transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+225-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/rubennunes/.gradle/caches/9.0-milestone-1/transforms/ee22f7dbd9103b82a4aefc9c0a641afc/transformed/transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
 226    </application>
 227
 228</manifest>

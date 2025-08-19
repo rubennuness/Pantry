@@ -30,6 +30,9 @@ import com.smartgrocery.pantry.data.ProductSearchProvider
 import com.smartgrocery.pantry.data.StoreProduct
 import com.smartgrocery.pantry.data.SerpApiProvider
 import kotlinx.coroutines.withContext
+import androidx.compose.runtime.rememberCoroutineScope
+import android.util.Log
+import androidx.compose.foundation.layout.heightIn
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import kotlinx.coroutines.CoroutineScope
@@ -135,6 +138,7 @@ private fun ProductSearchBox(provider: ProductSearchProvider = SerpApiProvider(B
 }) {
     var query by remember { mutableStateOf("") }
     var results by remember { mutableStateOf<List<StoreProduct>>(emptyList()) }
+    val scope = rememberCoroutineScope()
     Column {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedTextField(
@@ -144,14 +148,21 @@ private fun ProductSearchBox(provider: ProductSearchProvider = SerpApiProvider(B
                 label = { Text("Search products") }
             )
             Button(onClick = {
-                CoroutineScope(Dispatchers.IO).launch {
-                    val res = provider.search(query)
-                    withContext(Dispatchers.Main) { results = res }
+                Log.d("ProductSearch", "Searching query='" + query + "' provider=" + provider.javaClass.simpleName)
+                scope.launch(Dispatchers.IO) {
+                    try {
+                        val res = provider.search(query)
+                        Log.d("ProductSearch", "Results size=" + res.size)
+                        withContext(Dispatchers.Main) { results = res }
+                    } catch (t: Throwable) {
+                        Log.e("ProductSearch", "Search failed", t)
+                        withContext(Dispatchers.Main) { results = emptyList() }
+                    }
                 }
             }) { Text("Search") }
         }
         Spacer(Modifier.height(8.dp))
-        LazyColumn(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        LazyColumn(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.heightIn(max = 300.dp)) {
             items(results) { p ->
                 Card(Modifier.fillMaxWidth()) {
                     Column(Modifier.padding(12.dp)) {
