@@ -6,6 +6,16 @@ plugins {
     alias(libs.plugins.ksp)
 }
 
+// Read SerpAPI key from local.properties (preferred) or Gradle property SERPAPI_KEY
+val serpApiKey: String = run {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) {
+        val props = java.util.Properties()
+        file.inputStream().use { props.load(it) }
+        props.getProperty("SERPAPI_KEY") ?: providers.gradleProperty("SERPAPI_KEY").orNull ?: ""
+    } else providers.gradleProperty("SERPAPI_KEY").orNull ?: ""
+}
+
 android {
     namespace = "com.smartgrocery.pantry"
     compileSdk = 34
@@ -20,6 +30,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        buildConfigField("String", "SERPAPI_KEY", "\"${serpApiKey}\"")
     }
 
     buildTypes {
@@ -84,5 +96,6 @@ dependencies {
     implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.mlkit.text.recognition)
     implementation(libs.coroutines.android)
+    implementation(libs.okhttp)
 }
 

@@ -18,3 +18,10 @@ Notes:
 - Min SDK 24, target SDK 34.
 - Kotlin 2.0, Compose M3, Navigation Compose.
 - For now, data is in-memory with sample items; Room/OCR can be added later.
+
+## Product search (SerpAPI)
+To enable real product search across PT supermarkets via Google results:
+1. Get a SerpAPI key.
+2. Add to `local.properties` (do not commit):
+   SERPAPI_KEY=your_key_here
+3. Sync Gradle and Run. If the key is blank, the app falls back to mock results.
