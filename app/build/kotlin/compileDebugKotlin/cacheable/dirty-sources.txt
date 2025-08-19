@@ -1,0 +1,14 @@
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/data/Models.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/data/Repository.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/ui/screens.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/data/InMemoryRepository.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/data/ShoppingSearch.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/ui/AppState.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/MainActivity.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/data/db/Database.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/data/db/Dao.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/data/db/Entities.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/ui/theme/Theme.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/work/BackupWorker.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/ui/AppRoot.kt
+/Users/rubennunes/Library/CloudStorage/OneDrive-Personal/Pantry/app/src/main/java/com/smartgrocery/pantry/data/db/Converters.kt

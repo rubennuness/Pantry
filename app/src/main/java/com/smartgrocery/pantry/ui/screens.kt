@@ -36,7 +36,6 @@ import android.util.Log
 import androidx.compose.foundation.layout.heightIn
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
-import com.google.mlkit.vision.barcode.Barcode
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode as MLBarcode
 import kotlinx.coroutines.CoroutineScope
@@ -46,8 +45,6 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.heightIn
-import androidx.compose.runtime.rememberCoroutineScope
-import android.util.Log
 
 @Composable
 fun InventoryList(app: AppState) {
@@ -206,7 +203,7 @@ private fun BarcodeScanRow(
 @Suppress("UNCHECKED_CAST")
 private suspend fun <T> com.google.android.gms.tasks.Task<T>.await(): T =
     kotlinx.coroutines.suspendCancellableCoroutine { cont ->
-        addOnSuccessListener { result -> cont.resume(result, null) }
+        addOnSuccessListener { result -> cont.resume(result) }
         addOnFailureListener { ex -> cont.resumeWithException(ex) }
         addOnCanceledListener { cont.cancel() }
     }
