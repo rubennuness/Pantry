@@ -1,5 +1,12 @@
 package com.smartgrocery.pantry.ui
 
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.CalendarMonth
+import androidx.compose.material.icons.outlined.DocumentScanner
+import androidx.compose.material.icons.outlined.Kitchen
+import androidx.compose.material.icons.outlined.Schedule
+import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -7,6 +14,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
@@ -55,7 +63,7 @@ fun AppRoot() {
         NavHost(
             navController = navController,
             startDestination = BottomDestination.Inventory.route,
-            modifier = androidx.compose.ui.Modifier.padding(paddingValues)
+            modifier = Modifier.padding(paddingValues)
         ) {
             composable(BottomDestination.Inventory.route) { InventoryScreen(appState) }
             composable(BottomDestination.Expiring.route) { ExpiringScreen(appState) }
@@ -67,11 +75,11 @@ fun AppRoot() {
 }
 
 sealed class BottomDestination(val route: String, val label: String, val icon: ImageVector) {
-    data object Inventory : BottomDestination("inventory", "Pantry", androidx.compose.material.icons.Icons.Outlined.Kitchen)
-    data object Expiring : BottomDestination("expiring", "Expiring", androidx.compose.material.icons.Icons.Outlined.Schedule)
-    data object MealPlan : BottomDestination("mealplan", "Meal Plan", androidx.compose.material.icons.Icons.Outlined.CalendarMonth)
-    data object ShoppingList : BottomDestination("shopping", "Shop", androidx.compose.material.icons.Icons.Outlined.ShoppingCart)
-    data object Scan : BottomDestination("scan", "Scan", androidx.compose.material.icons.Icons.Outlined.DocumentScanner)
+    data object Inventory : BottomDestination("inventory", "Pantry", Icons.Outlined.Kitchen)
+    data object Expiring : BottomDestination("expiring", "Expiring", Icons.Outlined.Schedule)
+    data object MealPlan : BottomDestination("mealplan", "Meal Plan", Icons.Outlined.CalendarMonth)
+    data object ShoppingList : BottomDestination("shopping", "Shop", Icons.Outlined.ShoppingCart)
+    data object Scan : BottomDestination("scan", "Scan", Icons.Outlined.DocumentScanner)
 }
 
 @Composable fun InventoryScreen(app: AppState) { InventoryList(app) }
