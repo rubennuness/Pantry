@@ -54,32 +54,61 @@ class EanSearchProvider(
         client.newCall(req).execute().use { resp ->
             val code = resp.code
             val bodyStr = resp.body?.string() ?: return null
-            Log.d("EanSearch", "HTTP $code, ${'$'}{bodyStr.length} bytes")
+            Log.d("EanSearch", "HTTP " + code + ", " + bodyStr.length + " bytes")
+            Log.d("EanSearch", "Body snippet: " + bodyStr.take(400))
             val list = mutableListOf<StoreProduct>()
             val trimmed = bodyStr.trim()
-            if (trimmed.startsWith("[")) {
-                // Array response (e.g., barcode-lookup)
-                val arr = org.json.JSONArray(trimmed)
-                for (i in 0 until arr.length()) {
-                    val o = arr.getJSONObject(i)
-                    val title = o.optString("name", o.optString("title", ""))
-                    val codeStr = o.optString("ean", o.optString("gtin", ""))
-                    val urlItem = o.optString("url", if (codeStr.isNotBlank()) "https://www.ean-search.org/ean/$codeStr" else "https://www.ean-search.org/")
-                    list += StoreProduct(store = "EAN-Search", title = title.ifBlank { codeStr }, price = null, url = urlItem)
+            try {
+                if (trimmed.startsWith("[")) {
+                    // Array response (e.g., barcode-lookup, product-search)
+                    val arr = org.json.JSONArray(trimmed)
+                    parseArray(arr, list)
+                } else {
+                    // Object response with nested array
+                    val json = org.json.JSONObject(trimmed)
+                    val candidateKeys = listOf("result", "results", "products", "items", "data")
+                    var handled = false
+                    for (key in candidateKeys) {
+                        val arr = json.optJSONArray(key)
+                        if (arr != null) {
+                            parseArray(arr, list)
+                            handled = true
+                            break
+                        }
+                    }
+                    if (!handled) {
+                        val keys = json.keys()
+                        while (keys.hasNext()) {
+                            val k = keys.next()
+                            val v = json.opt(k)
+                            if (v is JSONArray) {
+                                parseArray(v, list)
+                                if (list.isNotEmpty()) break
+                            }
+                        }
+                    }
                 }
-            } else {
-                // Object response with result array
-                val json = org.json.JSONObject(trimmed)
-                val results = json.optJSONArray("result") ?: JSONArray()
-                for (i in 0 until results.length()) {
-                    val o = results.getJSONObject(i)
-                    val title = o.optString("name", o.optString("title", ""))
-                    val codeStr = o.optString("ean", o.optString("gtin", ""))
-                    val urlItem = o.optString("url", if (codeStr.isNotBlank()) "https://www.ean-search.org/ean/$codeStr" else "https://www.ean-search.org/")
-                    list += StoreProduct(store = "EAN-Search", title = title.ifBlank { codeStr }, price = null, url = urlItem)
-                }
+            } catch (t: Throwable) {
+                Log.e("EanSearch", "Parse error", t)
             }
             return list
+        }
+    }
+
+    private fun parseArray(arr: JSONArray, out: MutableList<StoreProduct>) {
+        for (i in 0 until arr.length()) {
+            val el = arr.opt(i)
+            if (el is org.json.JSONObject) {
+                val title = el.optString("name", el.optString("title", ""))
+                val codeStr = el.optString("ean", el.optString("gtin", el.optString("barcode", "")))
+                val urlItem = el.optString("url", if (codeStr.isNotBlank()) "https://www.ean-search.org/ean/$codeStr" else "https://www.ean-search.org/")
+                if (title.isNotBlank() || codeStr.isNotBlank()) {
+                    out += StoreProduct(store = "EAN-Search", title = if (title.isBlank()) codeStr else title, price = null, url = urlItem)
+                }
+            } else if (el is String) {
+                val s = el.trim()
+                if (s.isNotBlank()) out += StoreProduct(store = "EAN-Search", title = s, price = null, url = "https://www.ean-search.org/")
+            }
         }
     }
 
