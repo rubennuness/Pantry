@@ -44,7 +44,7 @@ class EanSearchProvider(
     }
 
     private fun buildBarcodeUrl(ean: String): String =
-        "$baseUrl?op=barcode&format=json&token=$token&ean=$ean"
+        "$baseUrl?op=barcode-lookup&format=json&token=$token&ean=$ean"
 
     private fun buildSearchUrl(term: String): String =
         "$baseUrl?op=search&format=json&token=$token&term=" + java.net.URLEncoder.encode(term, "UTF-8")
@@ -52,17 +52,32 @@ class EanSearchProvider(
     private fun request(url: String): List<StoreProduct>? {
         val req = Request.Builder().url(url).get().build()
         client.newCall(req).execute().use { resp ->
-            if (!resp.isSuccessful) return null
-            val body = resp.body?.string() ?: return null
-            val json = org.json.JSONObject(body)
-            val results = json.optJSONArray("result") ?: JSONArray()
+            val code = resp.code
+            val bodyStr = resp.body?.string() ?: return null
+            Log.d("EanSearch", "HTTP $code, ${'$'}{bodyStr.length} bytes")
             val list = mutableListOf<StoreProduct>()
-            for (i in 0 until results.length()) {
-                val o = results.getJSONObject(i)
-                val title = o.optString("name", o.optString("title", ""))
-                val code = o.optString("ean", o.optString("gtin", ""))
-                val urlItem = o.optString("url", if (code.isNotBlank()) "https://www.ean-search.org/ean/$code" else "https://www.ean-search.org/")
-                list += StoreProduct(store = "EAN-Search", title = title.ifBlank { code }, price = null, url = urlItem)
+            val trimmed = bodyStr.trim()
+            if (trimmed.startsWith("[")) {
+                // Array response (e.g., barcode-lookup)
+                val arr = org.json.JSONArray(trimmed)
+                for (i in 0 until arr.length()) {
+                    val o = arr.getJSONObject(i)
+                    val title = o.optString("name", o.optString("title", ""))
+                    val codeStr = o.optString("ean", o.optString("gtin", ""))
+                    val urlItem = o.optString("url", if (codeStr.isNotBlank()) "https://www.ean-search.org/ean/$codeStr" else "https://www.ean-search.org/")
+                    list += StoreProduct(store = "EAN-Search", title = title.ifBlank { codeStr }, price = null, url = urlItem)
+                }
+            } else {
+                // Object response with result array
+                val json = org.json.JSONObject(trimmed)
+                val results = json.optJSONArray("result") ?: JSONArray()
+                for (i in 0 until results.length()) {
+                    val o = results.getJSONObject(i)
+                    val title = o.optString("name", o.optString("title", ""))
+                    val codeStr = o.optString("ean", o.optString("gtin", ""))
+                    val urlItem = o.optString("url", if (codeStr.isNotBlank()) "https://www.ean-search.org/ean/$codeStr" else "https://www.ean-search.org/")
+                    list += StoreProduct(store = "EAN-Search", title = title.ifBlank { codeStr }, price = null, url = urlItem)
+                }
             }
             return list
         }
