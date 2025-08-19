@@ -25,3 +25,13 @@ To enable real product search across PT supermarkets via Google results:
 2. Add to `local.properties` (do not commit):
    SERPAPI_KEY=your_key_here
 3. Sync Gradle and Run. If the key is blank, the app falls back to mock results.
+
+## Product search (EAN-Search)
+To enable EAN-Search provider:
+1. Get an API token from EAN-Search.
+2. Add to `local.properties` (do not commit):
+   EAN_SEARCH_TOKEN=your_token_here
+   EAN_SEARCH_BASE_URL=https://api.ean-search.org/api
+3. Sync Gradle and Run. If present, the app prefers EAN-Search over SerpAPI.
+
+Reference: `https://www.ean-search.org/`

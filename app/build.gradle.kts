@@ -18,6 +18,24 @@ val serpApiKey: String = run {
     } else providers.gradleProperty("SERPAPI_KEY").orNull ?: ""
 }
 
+// EAN-Search configuration
+val eanSearchToken: String = run {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) {
+        val props = Properties()
+        file.inputStream().use { props.load(it) }
+        props.getProperty("EAN_SEARCH_TOKEN") ?: providers.gradleProperty("EAN_SEARCH_TOKEN").orNull ?: ""
+    } else providers.gradleProperty("EAN_SEARCH_TOKEN").orNull ?: ""
+}
+val eanSearchBaseUrl: String = run {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) {
+        val props = Properties()
+        file.inputStream().use { props.load(it) }
+        props.getProperty("EAN_SEARCH_BASE_URL") ?: "https://api.ean-search.org/api"
+    } else "https://api.ean-search.org/api"
+}
+
 android {
     namespace = "com.smartgrocery.pantry"
     compileSdk = 34
@@ -34,6 +52,8 @@ android {
         }
 
         buildConfigField("String", "SERPAPI_KEY", "\"${serpApiKey}\"")
+        buildConfigField("String", "EAN_SEARCH_TOKEN", "\"${eanSearchToken}\"")
+        buildConfigField("String", "EAN_SEARCH_BASE_URL", "\"${eanSearchBaseUrl}\"")
     }
 
     buildTypes {

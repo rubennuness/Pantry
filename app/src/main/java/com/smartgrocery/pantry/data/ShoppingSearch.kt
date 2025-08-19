@@ -3,6 +3,7 @@ package com.smartgrocery.pantry.data
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray
+import com.smartgrocery.pantry.BuildConfig
 
 data class StoreProduct(
     val store: String,
@@ -13,6 +14,34 @@ data class StoreProduct(
 
 interface ProductSearchProvider {
     suspend fun search(query: String): List<StoreProduct>
+}
+
+class EanSearchProvider(
+    private val token: String = BuildConfig.EAN_SEARCH_TOKEN,
+    private val baseUrl: String = BuildConfig.EAN_SEARCH_BASE_URL,
+    private val client: OkHttpClient = OkHttpClient()
+) : ProductSearchProvider {
+    override suspend fun search(query: String): List<StoreProduct> {
+        if (token.isBlank()) return emptyList()
+        // EAN-Search supports query by product name. The API shape can vary.
+        val url = "$baseUrl?op=search&format=json&token=$token&term=" + java.net.URLEncoder.encode(query, "UTF-8")
+        val req = Request.Builder().url(url).get().build()
+        client.newCall(req).execute().use { resp ->
+            if (!resp.isSuccessful) return emptyList()
+            val body = resp.body?.string() ?: return emptyList()
+            val json = org.json.JSONObject(body)
+            val results = json.optJSONArray("result") ?: JSONArray()
+            val list = mutableListOf<StoreProduct>()
+            for (i in 0 until results.length()) {
+                val o = results.getJSONObject(i)
+                val title = o.optString("name", o.optString("title", query))
+                val code = o.optString("ean", o.optString("gtin", ""))
+                val urlItem = o.optString("url", "https://www.ean-search.org/ean/$code")
+                list += StoreProduct(store = "EAN-Search", title = title, price = null, url = urlItem)
+            }
+            return list
+        }
+    }
 }
 
 class SerpApiProvider(

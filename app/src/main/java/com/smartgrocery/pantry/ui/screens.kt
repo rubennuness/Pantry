@@ -29,6 +29,7 @@ import com.smartgrocery.pantry.data.MockProvider
 import com.smartgrocery.pantry.data.ProductSearchProvider
 import com.smartgrocery.pantry.data.StoreProduct
 import com.smartgrocery.pantry.data.SerpApiProvider
+import com.smartgrocery.pantry.data.EanSearchProvider
 import kotlinx.coroutines.withContext
 import androidx.compose.runtime.rememberCoroutineScope
 import android.util.Log
@@ -133,9 +134,13 @@ private fun appAddSample(app: AppState) {
 }
 
 @Composable
-private fun ProductSearchBox(provider: ProductSearchProvider = SerpApiProvider(BuildConfig.SERPAPI_KEY).let { p ->
-    if (BuildConfig.SERPAPI_KEY.isBlank()) MockProvider() else p
-}) {
+private fun ProductSearchBox(
+    provider: ProductSearchProvider = when {
+        BuildConfig.EAN_SEARCH_TOKEN.isNotBlank() -> EanSearchProvider()
+        BuildConfig.SERPAPI_KEY.isNotBlank() -> SerpApiProvider(BuildConfig.SERPAPI_KEY)
+        else -> MockProvider()
+    }
+) {
     var query by remember { mutableStateOf("") }
     var results by remember { mutableStateOf<List<StoreProduct>>(emptyList()) }
     val scope = rememberCoroutineScope()
