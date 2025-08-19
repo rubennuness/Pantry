@@ -45,6 +45,14 @@ class AppState(
             repository.generateFiveDayPlan(today.toString())
         }
     }
+
+    suspend fun addToShopping(item: ShoppingItem) {
+        withContext(Dispatchers.IO) { repository.addToShopping(item) }
+    }
+
+    suspend fun removeFromShopping(id: String) {
+        withContext(Dispatchers.IO) { repository.removeFromShopping(id) }
+    }
 }
 
 @Composable

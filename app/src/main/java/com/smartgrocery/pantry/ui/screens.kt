@@ -39,6 +39,7 @@ import android.util.Log
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.AddShoppingCart
+import androidx.compose.material.icons.outlined.Delete
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.barcode.BarcodeScanning
@@ -204,7 +205,7 @@ private fun BarcodeScanRow(
                             Text(p.url, style = MaterialTheme.typography.bodySmall)
                         }
                         IconButton(onClick = {
-                            addToCart(p)
+                            addToCart(app, p)
                         }) { Icon(Icons.Outlined.AddShoppingCart, contentDescription = "Add to cart") }
                     }
                 }
@@ -213,13 +214,9 @@ private fun BarcodeScanRow(
     }
 }
 
-private fun addToCart(p: StoreProduct) {
-    // Fire-and-forget add to cart by calling repository via global scope
-    kotlinx.coroutines.GlobalScope.launch(Dispatchers.IO) {
-        val app = com.smartgrocery.pantry.AppLocator.appStateProvider?.invoke() ?: return@launch
-        val repoField = AppState::class.java.getDeclaredField("repository").apply { isAccessible = true }
-        val repo = repoField.get(app) as com.smartgrocery.pantry.data.Repository
-        repo.addToShopping(
+private fun addToCart(app: AppState, p: StoreProduct) {
+    CoroutineScope(Dispatchers.IO).launch {
+        app.addToShopping(
             ShoppingItem(
                 title = p.title,
                 store = p.store,
@@ -228,6 +225,12 @@ private fun addToCart(p: StoreProduct) {
                 ean = null
             )
         )
+    }
+}
+
+private fun removeFromCart(app: AppState, id: String) {
+    CoroutineScope(Dispatchers.IO).launch {
+        app.removeFromShopping(id)
     }
 }
 
@@ -276,10 +279,34 @@ private fun ProductSearchBox(
         LazyColumn(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.heightIn(max = 300.dp)) {
             items(results) { p ->
                 Card(Modifier.fillMaxWidth()) {
-                    Column(Modifier.padding(12.dp)) {
-                        Text("${p.store}: ${p.title}")
-                        p.price?.let { Text("€$it") }
-                        Text(p.url, style = MaterialTheme.typography.bodySmall)
+                    Row(Modifier.padding(12.dp), horizontalArrangement = Arrangement.SpaceBetween) {
+                        Column(Modifier.weight(1f)) {
+                            Text("${p.store}: ${p.title}")
+                            p.price?.let { Text("€$it") }
+                            Text(p.url, style = MaterialTheme.typography.bodySmall)
+                        }
+                        IconButton(onClick = {
+                            addToCart(app, p)
+                        }) { Icon(Icons.Outlined.AddShoppingCart, contentDescription = "Add to cart") }
+                    }
+                }
+            }
+        }
+
+        Spacer(Modifier.height(12.dp))
+        Text("Cart", style = MaterialTheme.typography.titleMedium)
+        LazyColumn(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            items(app.shopping) { s ->
+                Card(Modifier.fillMaxWidth()) {
+                    Row(Modifier.padding(12.dp), horizontalArrangement = Arrangement.SpaceBetween) {
+                        Column(Modifier.weight(1f)) {
+                            Text(s.title)
+                            s.store?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
+                            s.price?.let { Text("€$it", style = MaterialTheme.typography.bodySmall) }
+                        }
+                        IconButton(onClick = { removeFromCart(app, s.id) }) {
+                            Icon(Icons.Outlined.Delete, contentDescription = "Remove")
+                        }
                     }
                 }
             }

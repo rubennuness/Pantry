@@ -30,22 +30,26 @@ public final class AppDatabase_Impl extends AppDatabase {
 
   private volatile MealDao _mealDao;
 
+  private volatile ShoppingDao _shoppingDao;
+
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `pantry_items` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `category` TEXT, `quantity` REAL NOT NULL, `unit` TEXT, `expirationDate` TEXT, `purchasedDate` TEXT, `parLevel` REAL NOT NULL, `avgDailyUse` REAL NOT NULL, PRIMARY KEY(`id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meals` (`id` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT, `plannedDate` TEXT, `usedItemIdsJson` TEXT NOT NULL, PRIMARY KEY(`id`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `shopping_items` (`id` TEXT NOT NULL, `title` TEXT NOT NULL, `store` TEXT, `price` REAL, `url` TEXT, `ean` TEXT, PRIMARY KEY(`id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'aba5d2af40d7f0b73d4853710341fbe7')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '920b4fea161a0b469bc5b99e6201a6d9')");
       }
 
       @Override
       public void dropAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS `pantry_items`");
         db.execSQL("DROP TABLE IF EXISTS `meals`");
+        db.execSQL("DROP TABLE IF EXISTS `shopping_items`");
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
           for (RoomDatabase.Callback _callback : _callbacks) {
@@ -123,9 +127,25 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoMeals + "\n"
                   + " Found:\n" + _existingMeals);
         }
+        final HashMap<String, TableInfo.Column> _columnsShoppingItems = new HashMap<String, TableInfo.Column>(6);
+        _columnsShoppingItems.put("id", new TableInfo.Column("id", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsShoppingItems.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsShoppingItems.put("store", new TableInfo.Column("store", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsShoppingItems.put("price", new TableInfo.Column("price", "REAL", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsShoppingItems.put("url", new TableInfo.Column("url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsShoppingItems.put("ean", new TableInfo.Column("ean", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysShoppingItems = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesShoppingItems = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoShoppingItems = new TableInfo("shopping_items", _columnsShoppingItems, _foreignKeysShoppingItems, _indicesShoppingItems);
+        final TableInfo _existingShoppingItems = TableInfo.read(db, "shopping_items");
+        if (!_infoShoppingItems.equals(_existingShoppingItems)) {
+          return new RoomOpenHelper.ValidationResult(false, "shopping_items(com.smartgrocery.pantry.data.db.ShoppingItemEntity).\n"
+                  + " Expected:\n" + _infoShoppingItems + "\n"
+                  + " Found:\n" + _existingShoppingItems);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "aba5d2af40d7f0b73d4853710341fbe7", "624ca784a751b3060ec5fbca70dfec1a");
+    }, "920b4fea161a0b469bc5b99e6201a6d9", "9bb845b6134515e8905f9753d4a116e1");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
@@ -136,7 +156,7 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "pantry_items","meals");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "pantry_items","meals","shopping_items");
   }
 
   @Override
@@ -147,6 +167,7 @@ public final class AppDatabase_Impl extends AppDatabase {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `pantry_items`");
       _db.execSQL("DELETE FROM `meals`");
+      _db.execSQL("DELETE FROM `shopping_items`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -163,6 +184,7 @@ public final class AppDatabase_Impl extends AppDatabase {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
     _typeConvertersMap.put(PantryItemDao.class, PantryItemDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(MealDao.class, MealDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(ShoppingDao.class, ShoppingDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -205,6 +227,20 @@ public final class AppDatabase_Impl extends AppDatabase {
           _mealDao = new MealDao_Impl(this);
         }
         return _mealDao;
+      }
+    }
+  }
+
+  @Override
+  public ShoppingDao shoppingDao() {
+    if (_shoppingDao != null) {
+      return _shoppingDao;
+    } else {
+      synchronized(this) {
+        if(_shoppingDao == null) {
+          _shoppingDao = new ShoppingDao_Impl(this);
+        }
+        return _shoppingDao;
       }
     }
   }
