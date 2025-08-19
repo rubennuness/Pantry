@@ -36,9 +36,18 @@ import android.util.Log
 import androidx.compose.foundation.layout.heightIn
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
+import com.google.mlkit.vision.barcode.Barcode
+import com.google.mlkit.vision.barcode.BarcodeScanning
+import com.google.mlkit.vision.barcode.common.Barcode as MLBarcode
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.PickVisualMediaRequest
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.runtime.rememberCoroutineScope
+import android.util.Log
 
 @Composable
 fun InventoryList(app: AppState) {
@@ -118,11 +127,12 @@ fun ReceiptScanStub(app: AppState) {
     Column(Modifier.fillMaxSize().padding(16.dp)) {
         Text("Receipt Scan", style = MaterialTheme.typography.headlineSmall)
         Spacer(Modifier.height(12.dp))
-        Text("Add from receipt image using OCR (simple parser).")
+        Text("Scan a barcode (EAN) or add sample items.")
+        Spacer(Modifier.height(8.dp))
+        BarcodeScanRow()
         Spacer(Modifier.height(8.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             Button(onClick = { appAddSample(app) }) { Text("Add sample items") }
-            // In a full implementation: launch photo picker, run ML Kit OCR, parse lines to items
         }
     }
 }
@@ -132,6 +142,74 @@ private fun appAddSample(app: AppState) {
         app.addSampleDataIfEmpty()
     }
 }
+
+@Composable
+private fun BarcodeScanRow(
+    provider: ProductSearchProvider = when {
+        BuildConfig.EAN_SEARCH_TOKEN.isNotBlank() -> EanSearchProvider()
+        BuildConfig.SERPAPI_KEY.isNotBlank() -> SerpApiProvider(BuildConfig.SERPAPI_KEY)
+        else -> MockProvider()
+    }
+) {
+    var lastCode by remember { mutableStateOf("") }
+    var results by remember { mutableStateOf<List<StoreProduct>>(emptyList()) }
+    val scope = rememberCoroutineScope()
+    val context = androidx.compose.ui.platform.LocalContext.current
+
+    val picker = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
+        if (uri != null) {
+            scope.launch(Dispatchers.IO) {
+                try {
+                    val image = InputImage.fromFilePath(context, uri)
+                    val scanner = BarcodeScanning.getClient(
+                        com.google.mlkit.vision.barcode.BarcodeScannerOptions.Builder()
+                            .setBarcodeFormats(MLBarcode.FORMAT_EAN_8, MLBarcode.FORMAT_EAN_13)
+                            .build()
+                    )
+                    val barcodes = scanner.process(image).await()
+                    val code = barcodes.firstOrNull()?.rawValue.orEmpty()
+                    Log.d("Barcode", "Detected=$code")
+                    withContext(Dispatchers.Main) { lastCode = code }
+                    if (code.isNotBlank()) {
+                        val res = provider.search(code)
+                        withContext(Dispatchers.Main) { results = res }
+                    }
+                } catch (t: Throwable) {
+                    Log.e("Barcode", "Scan failed", t)
+                }
+            }
+        }
+    }
+
+    Column {
+        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Button(onClick = {
+                picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+            }) { Text("Pick image for barcode") }
+            if (lastCode.isNotBlank()) Text("EAN: $lastCode")
+        }
+        Spacer(Modifier.height(8.dp))
+        LazyColumn(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.heightIn(max = 300.dp)) {
+            items(results) { p ->
+                Card(Modifier.fillMaxWidth()) {
+                    Column(Modifier.padding(12.dp)) {
+                        Text("${p.store}: ${p.title}")
+                        p.price?.let { Text("€$it") }
+                        Text(p.url, style = MaterialTheme.typography.bodySmall)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Suppress("UNCHECKED_CAST")
+private suspend fun <T> com.google.android.gms.tasks.Task<T>.await(): T =
+    kotlinx.coroutines.suspendCancellableCoroutine { cont ->
+        addOnSuccessListener { result -> cont.resume(result, null) }
+        addOnFailureListener { ex -> cont.resumeWithException(ex) }
+        addOnCanceledListener { cont.cancel() }
+    }
 
 @Composable
 private fun ProductSearchBox(

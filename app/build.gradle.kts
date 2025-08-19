@@ -120,5 +120,6 @@ dependencies {
     implementation(libs.mlkit.text.recognition)
     implementation(libs.coroutines.android)
     implementation(libs.okhttp)
+    implementation(libs.mlkit.barcode.scanning)
 }
 

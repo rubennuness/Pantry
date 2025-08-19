@@ -1,9 +1,11 @@
 package com.smartgrocery.pantry.data
 
+import android.util.Log
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray
 import com.smartgrocery.pantry.BuildConfig
+import java.text.Normalizer
 
 data class StoreProduct(
     val store: String,
@@ -23,24 +25,64 @@ class EanSearchProvider(
 ) : ProductSearchProvider {
     override suspend fun search(query: String): List<StoreProduct> {
         if (token.isBlank()) return emptyList()
-        // EAN-Search supports query by product name. The API shape can vary.
-        val url = "$baseUrl?op=search&format=json&token=$token&term=" + java.net.URLEncoder.encode(query, "UTF-8")
+
+        // If query looks like a barcode, try barcode endpoint first
+        val normalized = query.filter { it.isDigit() }
+        if (normalized.length == 8 || normalized.length == 13) {
+            buildBarcodeUrl(normalized).also { Log.d("EanSearch", it) }
+            request(buildBarcodeUrl(normalized))?.let { return it }
+        }
+
+        // Try progressively simplified queries
+        val attempts = buildQueryAttempts(query)
+        for (q in attempts) {
+            val url = buildSearchUrl(q)
+            Log.d("EanSearch", url)
+            request(url)?.takeIf { it.isNotEmpty() }?.let { return it }
+        }
+        return emptyList()
+    }
+
+    private fun buildBarcodeUrl(ean: String): String =
+        "$baseUrl?op=barcode&format=json&token=$token&ean=$ean"
+
+    private fun buildSearchUrl(term: String): String =
+        "$baseUrl?op=search&format=json&token=$token&term=" + java.net.URLEncoder.encode(term, "UTF-8")
+
+    private fun request(url: String): List<StoreProduct>? {
         val req = Request.Builder().url(url).get().build()
         client.newCall(req).execute().use { resp ->
-            if (!resp.isSuccessful) return emptyList()
-            val body = resp.body?.string() ?: return emptyList()
+            if (!resp.isSuccessful) return null
+            val body = resp.body?.string() ?: return null
             val json = org.json.JSONObject(body)
             val results = json.optJSONArray("result") ?: JSONArray()
             val list = mutableListOf<StoreProduct>()
             for (i in 0 until results.length()) {
                 val o = results.getJSONObject(i)
-                val title = o.optString("name", o.optString("title", query))
+                val title = o.optString("name", o.optString("title", ""))
                 val code = o.optString("ean", o.optString("gtin", ""))
-                val urlItem = o.optString("url", "https://www.ean-search.org/ean/$code")
-                list += StoreProduct(store = "EAN-Search", title = title, price = null, url = urlItem)
+                val urlItem = o.optString("url", if (code.isNotBlank()) "https://www.ean-search.org/ean/$code" else "https://www.ean-search.org/")
+                list += StoreProduct(store = "EAN-Search", title = title.ifBlank { code }, price = null, url = urlItem)
             }
             return list
         }
+    }
+
+    private fun buildQueryAttempts(original: String): List<String> {
+        val trimmed = original.trim()
+        val lower = trimmed.lowercase()
+        val noDiacritics = Normalizer.normalize(lower, Normalizer.Form.NFD).replace("\\p{Mn}".toRegex(), "")
+        val tokens = noDiacritics.split(" ", "-", ",", ".", "/").map { it.filter { ch -> ch.isLetterOrDigit() } }.filter { it.length >= 3 }
+        val joined = tokens.joinToString(" ")
+        val attempts = linkedSetOf<String>()
+        if (trimmed.isNotBlank()) attempts += trimmed
+        if (lower != trimmed) attempts += lower
+        if (noDiacritics != lower) attempts += noDiacritics
+        if (joined.isNotBlank()) attempts += joined
+        tokens.firstOrNull()?.let { attempts += it }
+        // Domain-specific stopwords to drop
+        attempts += joined.replace(" uht", "").trim()
+        return attempts.filter { it.isNotBlank() }.toList()
     }
 }
 
