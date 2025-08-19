@@ -44,10 +44,10 @@ class EanSearchProvider(
     }
 
     private fun buildBarcodeUrl(ean: String): String =
-        "$baseUrl?op=barcode-lookup&format=json&token=$token&ean=$ean"
+        "$baseUrl?token=$token&op=barcode-lookup&format=json&ean=$ean"
 
-    private fun buildSearchUrl(term: String): String =
-        "$baseUrl?op=search&format=json&token=$token&term=" + java.net.URLEncoder.encode(term, "UTF-8")
+    private fun buildSearchUrl(name: String): String =
+        "$baseUrl?token=$token&op=product-search&format=json&name=" + java.net.URLEncoder.encode(name, "UTF-8")
 
     private fun request(url: String): List<StoreProduct>? {
         val req = Request.Builder().url(url).get().build()
