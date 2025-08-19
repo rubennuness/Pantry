@@ -10,6 +10,10 @@ navigation-compose = "2.8.0"
 serialization = "1.7.3"
 coil = "2.6.0"
 desugar = "2.1.2"
+room = "2.6.1"
+work = "2.9.1"
+mlkit-text = "16.0.0"
+coroutines = "1.8.1"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -36,4 +40,10 @@ compose-material-icons-extended = { group = "androidx.compose.material", name = 
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
+mlkit-text-recognition = { group = "com.google.mlkit", name = "text-recognition", version.ref = "mlkit-text" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 

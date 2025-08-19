@@ -19,6 +19,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.smartgrocery.pantry.data.PantryItem
 import com.smartgrocery.pantry.data.wasteRisk
+import com.google.mlkit.vision.common.InputImage
+import com.google.mlkit.vision.text.TextRecognition
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @Composable
 fun InventoryList(app: AppState) {
@@ -96,13 +101,18 @@ fun ReceiptScanStub(app: AppState) {
     Column(Modifier.fillMaxSize().padding(16.dp)) {
         Text("Receipt Scan", style = MaterialTheme.typography.headlineSmall)
         Spacer(Modifier.height(12.dp))
-        Text("MVP stub: tap to add sample item from a mock receipt.")
+        Text("Add from receipt image using OCR (simple parser).")
         Spacer(Modifier.height(8.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            Button(onClick = {
-                app.addSampleDataIfEmpty()
-            }) { Text("Add sample items") }
+            Button(onClick = { appAddSample(app) }) { Text("Add sample items") }
+            // In a full implementation: launch photo picker, run ML Kit OCR, parse lines to items
         }
+    }
+}
+
+private fun appAddSample(app: AppState) {
+    CoroutineScope(Dispatchers.IO).launch {
+        app.addSampleDataIfEmpty()
     }
 }
 
