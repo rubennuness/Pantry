@@ -12,6 +12,8 @@ import com.smartgrocery.pantry.ui.AppRoot
 import com.smartgrocery.pantry.ui.theme.AppTheme
 import com.smartgrocery.pantry.work.BackupWorker
 import java.util.concurrent.TimeUnit
+import com.smartgrocery.pantry.AppLocator
+import com.smartgrocery.pantry.ui.rememberAppState
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +22,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
+                    val state = rememberAppState()
+                    AppLocator.appStateProvider = { state }
                     AppRoot()
                 }
             }

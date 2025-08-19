@@ -15,6 +15,8 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -28,12 +30,15 @@ import com.smartgrocery.pantry.BuildConfig
 import com.smartgrocery.pantry.data.MockProvider
 import com.smartgrocery.pantry.data.ProductSearchProvider
 import com.smartgrocery.pantry.data.StoreProduct
+import com.smartgrocery.pantry.data.ShoppingItem
 import com.smartgrocery.pantry.data.SerpApiProvider
 import com.smartgrocery.pantry.data.EanSearchProvider
 import kotlinx.coroutines.withContext
 import androidx.compose.runtime.rememberCoroutineScope
 import android.util.Log
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.AddShoppingCart
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.barcode.BarcodeScanning
@@ -192,14 +197,37 @@ private fun BarcodeScanRow(
         LazyColumn(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.heightIn(max = 300.dp)) {
             items(results) { p ->
                 Card(Modifier.fillMaxWidth()) {
-                    Column(Modifier.padding(12.dp)) {
-                        Text("${p.store}: ${p.title}")
-                        p.price?.let { Text("€$it") }
-                        Text(p.url, style = MaterialTheme.typography.bodySmall)
+                    Row(Modifier.padding(12.dp), horizontalArrangement = Arrangement.SpaceBetween) {
+                        Column(Modifier.weight(1f)) {
+                            Text("${p.store}: ${p.title}")
+                            p.price?.let { Text("€$it") }
+                            Text(p.url, style = MaterialTheme.typography.bodySmall)
+                        }
+                        IconButton(onClick = {
+                            addToCart(p)
+                        }) { Icon(Icons.Outlined.AddShoppingCart, contentDescription = "Add to cart") }
                     }
                 }
             }
         }
+    }
+}
+
+private fun addToCart(p: StoreProduct) {
+    // Fire-and-forget add to cart by calling repository via global scope
+    kotlinx.coroutines.GlobalScope.launch(Dispatchers.IO) {
+        val app = com.smartgrocery.pantry.AppLocator.appStateProvider?.invoke() ?: return@launch
+        val repoField = AppState::class.java.getDeclaredField("repository").apply { isAccessible = true }
+        val repo = repoField.get(app) as com.smartgrocery.pantry.data.Repository
+        repo.addToShopping(
+            ShoppingItem(
+                title = p.title,
+                store = p.store,
+                price = p.price,
+                url = p.url,
+                ean = null
+            )
+        )
     }
 }
 

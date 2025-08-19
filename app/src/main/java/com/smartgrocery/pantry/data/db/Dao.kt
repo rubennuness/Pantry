@@ -43,3 +43,18 @@ interface MealDao {
     suspend fun getAllOnce(): List<MealEntity>
 }
 
+@Dao
+interface ShoppingDao {
+    @Query("SELECT * FROM shopping_items ORDER BY title ASC")
+    fun observeAll(): kotlinx.coroutines.flow.Flow<List<ShoppingItemEntity>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsert(item: ShoppingItemEntity)
+
+    @Query("DELETE FROM shopping_items WHERE id = :id")
+    suspend fun deleteById(id: String)
+
+    @Query("DELETE FROM shopping_items")
+    suspend fun clearAll()
+}
+

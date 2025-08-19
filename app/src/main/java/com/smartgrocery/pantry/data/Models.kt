@@ -37,3 +37,12 @@ fun PantryItem.wasteRisk(todayIso: String = LocalDate.now().toString()): WasteRi
     } catch (_: Throwable) { WasteRisk.LOW }
 }
 
+data class ShoppingItem(
+    val id: String = "",
+    val title: String,
+    val store: String?,
+    val price: Double?,
+    val url: String?,
+    val ean: String?,
+)
+

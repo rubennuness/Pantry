@@ -13,11 +13,14 @@ import java.util.UUID
 interface Repository {
     val itemsFlow: Flow<List<PantryItem>>
     val mealsFlow: Flow<List<Meal>>
+    val shoppingFlow: Flow<List<ShoppingItem>>
 
     suspend fun upsertItem(item: PantryItem)
     suspend fun removeItem(id: String)
     suspend fun generateFiveDayPlan(todayIso: String): List<Meal>
     suspend fun exportJson(): String
+    suspend fun addToShopping(item: ShoppingItem)
+    suspend fun removeFromShopping(id: String)
 }
 
 class RoomRepository private constructor(context: Context) : Repository {
@@ -30,6 +33,10 @@ class RoomRepository private constructor(context: Context) : Repository {
 
     override val mealsFlow: Flow<List<Meal>> = db.mealDao().observeAll().map { entities ->
         entities.map { it.toModel() }
+    }
+
+    override val shoppingFlow: Flow<List<ShoppingItem>> = db.shoppingDao().observeAll().map { list ->
+        list.map { it.toModel() }
     }
 
     override suspend fun upsertItem(item: PantryItem) {
@@ -63,7 +70,16 @@ class RoomRepository private constructor(context: Context) : Repository {
     override suspend fun exportJson(): String {
         val items = db.pantryItemDao().getAllOnce().map { it.toModel() }
         val meals = db.mealDao().getAllOnce().map { it.toModel() }
+        val shopping = db.shoppingDao().observeAll() // flow not used here; export minimal
         return json.encodeToString(mapOf("items" to items, "meals" to meals))
+    }
+
+    override suspend fun addToShopping(item: ShoppingItem) {
+        db.shoppingDao().upsert(item.toEntity())
+    }
+
+    override suspend fun removeFromShopping(id: String) {
+        db.shoppingDao().deleteById(id)
     }
 
     private fun PantryItemEntity.toModel(): PantryItem = PantryItem(
@@ -92,6 +108,14 @@ class RoomRepository private constructor(context: Context) : Repository {
         unit = unit,
         expirationDate = expirationDate,
         purchasedDate = purchasedDate,
+    )
+
+    private fun com.smartgrocery.pantry.data.db.ShoppingItemEntity.toModel(): ShoppingItem = ShoppingItem(
+        id = id, title = title, store = store ?: "", price = price, url = url, ean = ean
+    )
+
+    private fun ShoppingItem.toEntity(): com.smartgrocery.pantry.data.db.ShoppingItemEntity = com.smartgrocery.pantry.data.db.ShoppingItemEntity(
+        id = id.ifEmpty { UUID.randomUUID().toString() }, title = title, store = store, price = price, url = url, ean = ean
     )
 
     companion object {

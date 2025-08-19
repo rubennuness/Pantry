@@ -12,6 +12,7 @@ import com.smartgrocery.pantry.data.Meal
 import com.smartgrocery.pantry.data.PantryItem
 import com.smartgrocery.pantry.data.Repository
 import com.smartgrocery.pantry.data.RoomRepository
+import com.smartgrocery.pantry.data.ShoppingItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.withContext
@@ -22,6 +23,7 @@ class AppState(
 ) {
     var items by mutableStateOf(listOf<PantryItem>())
     var meals by mutableStateOf(listOf<Meal>())
+    var shopping by mutableStateOf(listOf<ShoppingItem>())
 
     fun startCollecting() {
         // No-op here; see LaunchedEffect in rememberAppState
@@ -57,6 +59,9 @@ fun rememberAppState(): AppState {
     }
     LaunchedEffect(Unit) {
         repo.mealsFlow.collectLatest { state.meals = it }
+    }
+    LaunchedEffect(Unit) {
+        repo.shoppingFlow.collectLatest { state.shopping = it }
     }
     return state
 }
