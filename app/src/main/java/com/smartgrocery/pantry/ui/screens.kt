@@ -46,6 +46,9 @@ import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.heightIn
 
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
+
 @Composable
 fun InventoryList(app: AppState) {
     Column(Modifier.fillMaxSize().padding(16.dp)) {
@@ -205,7 +208,7 @@ private suspend fun <T> com.google.android.gms.tasks.Task<T>.await(): T =
     kotlinx.coroutines.suspendCancellableCoroutine { cont ->
         addOnSuccessListener { result -> cont.resume(result) }
         addOnFailureListener { ex -> cont.resumeWithException(ex) }
-        addOnCanceledListener { cont.cancel() }
+        addOnCanceledListener { cont.cancel(null) }
     }
 
 @Composable
